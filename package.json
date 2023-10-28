@@ -1,0 +1,14 @@
+{
+  "name": "full-backend",
+  "version": "1.0.0",
+  "description": "learning backend",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aman Kumar Sinha",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
