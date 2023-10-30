@@ -1,9 +1,8 @@
-body{
-    margin: 0;
-    padding: 0;
-    background-color: rgb(168, 215, 222);
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-h1{
-    color: rgb(10, 24, 151);
+a {
+  color: #00B7FF;
 }
