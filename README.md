@@ -206,8 +206,6 @@ And your directory/folder structure looks like this
 ```
 
 
-<br>
-
 # [EXPRESS GENERATOR](https://expressjs.com/en/starter/generator.html)
 
 You can easily do all the above task by just using express generator and save your time to setting up backend again and again.
@@ -267,9 +265,9 @@ npx nodemon
 │   ├── index.js
 │   └── users.js
 └── views
-    ├── error.pug
-    ├── index.pug
-    └── layout.pug
+    ├── error.ejs
+    ├── index.ejs
+    └── layout.ejs
 ```
 
 ## Some changes that you have to keep in your mind.
