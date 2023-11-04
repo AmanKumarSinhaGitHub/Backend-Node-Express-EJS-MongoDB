@@ -226,8 +226,70 @@ router.get("/findUser", async function(req, res) {
 ```
 
 ---
-### 2. How do I find documents with a specific date range in Moongoose?
 
-### 3. How can I filter documents based on the existence of a field in Moongoose?
+### 2. How do I find documents where an array field contains all of a set of value.
 
-### 4. How can  I filter documents based on a specific field's length in Moongoose?
+In simple word, every user in our database have an array named "categories" and you have to find in which user's categories "nodejs" and "react" is available.
+
+```js
+router.get("/findUserUsingArray", async function(req, res) {
+
+  const user = await userModel.find({ categories: {$all: ["nodejs, react"]} });
+
+  res.send(user);
+});
+```
+
+### 3. How do I find documents with a specific date range in Moongoose?
+ 
+```js
+router.get("/findUserUsingDate", async function (req, res) {
+
+  let startingDate = new Date('2023-11-02')
+  let lastDate = new Date('2023-11-05')
+
+  // $gte (greater than or equal to) and $lte (less than or equal to) operator.
+  const user = await userModel.find({dateCreated: {$gte: startingDate, $lte: lastDate}});
+
+  res.send(user);
+});
+```
+
+### 4. How can I filter documents based on the existence of a field in Moongoose?
+
+You want to find users who have a "username" field in their documents. If a user document has a "username" field, you consider it as a match.
+
+```js
+router.get("/isFieldExist", async function (req, res) {
+
+  const user = await userModel.find({userName: {$exists: true}});
+
+  res.send(user);
+});
+```
+
+### 5. How can  I filter documents based on a specific field's length in Moongoose?
+
+Lets suppose you want to search username which length is less that x letter and greater than y letters.
+
+```js
+Find username which length is less than 10 and greater than 3 letter.
+
+router.get("/findByLength", async function(req, res){
+  let user = await userModel.find({
+    $expr:{
+      $and:[
+        {$gte: [{$strLenCP: '$userName'}, 3]},
+        {$lte: [{$strLenCP: '$userName'}, 10]}
+      ]
+    }
+  })
+  res.send(user)
+})
+```
+- It uses the $expr operator, which allows you to perform aggregation expressions within the query. In this case, it checks two conditions using the $and operator:
+
+- $gte: [{$strLenCP: '$userName'}, 3] checks if the length of the "userName" is greater than or equal to 3 characters.
+- $lte: [{$strLenCP: '$userName'}, 10] checks if the length of the "userName" is less than or equal to 10 characters.
+
+#### This is all about mongodb. Checkout our more branches for more infomation.
