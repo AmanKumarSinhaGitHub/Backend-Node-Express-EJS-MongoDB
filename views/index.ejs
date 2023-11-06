@@ -1,10 +1,78 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Authentication & Authorization</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1>Welcome to Authentication & Authorization </h1>
-  </body>
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Authentication & Authorization</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="/stylesheets/styles.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="heading">
+      <h2>Register Now</h1>
+    </div>
+
+
+    <form action="/register" method="post">
+
+      <div class="mb-3">
+        <label for="usernameOfUser" class="form-label fs-4">Username</label>
+        <input name="username" type="text" class="form-control" id="username" aria-describedby="username"
+          placeholder="Enter Your Username">
+      </div>
+
+      <div class="mb-3">
+        <label for="passwordOfUser" class="form-label fs-4">Password</label>
+        <input name="password" type="password" class="form-control" id="password" placeholder="Enter Your Password">
+      </div>
+
+      <div class="mb-3">
+        <label for="secretcodeOfUser" class="form-label fs-4">Secret Code</label>
+        <input name="secretcode" type="text" class="form-control" id="secretcode" placeholder="Enter Your Secret Code">
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+  </div>
+
+  <hr>
+  
+  <div class="container">
+
+    <div class="heading">
+      <h2>Login Here</h1>
+    </div>
+
+    <form action="/login" method="post">
+
+      <div class="mb-3">
+        <label for="usernameOfUser" class="form-label fs-4">Username</label>
+        <input name="username" type="text" class="form-control" id="username" aria-describedby="username"
+          placeholder="Enter Your Username">
+      </div>
+
+      <div class="mb-3">
+        <label for="passwordOfUser" class="form-label fs-4">Password</label>
+        <input name="password" type="password" class="form-control" id="password" placeholder="Enter Your Password">
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
