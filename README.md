@@ -617,3 +617,25 @@ git checkout <branch-name>
 ```
 
 Thank YOU
+
+----
+### Beginner-Friendly Projects with EJS, Node.js, Express.js & MongoDB
+
+Explore these beginner-friendly projects, featuring authentication and authorization functionalities, built using EJS, Node.js, Express.js, and MongoDB.
+
+#### Projects:
+
+1. **Blog Post Project**
+   - **Features**:
+     - User Authentication: Implement user registration and login seamlessly.
+     - Post Management: Create, edit, and delete posts effortlessly.
+     - User-Centric Viewing: Browse through all posts authored by a specific user.
+     - Profile Enhancement: Upload and update profile images with ease.
+     - Engagement Features: Like and unlike posts to interact with content dynamically.
+   - [GitHub Repository Link](https://github.com/AmanKumarSinhaGitHub/Blog-Post.git)
+
+
+Feel free to explore and contribute to these projects!
+
+
+
